@@ -8,8 +8,8 @@ logger = logging.getLogger(__name__)
 
 load_dotenv()
 
-DATASET_FILENAME = os.getenv("DATASET_FILENAME")
-DB_PATH = os.getenv("DB_PATH")
+DATASET_FILENAME = os.getenv("DATASET_FILENAME", "dataset/disease_symptoms.csv")
+DB_PATH = os.getenv("DB_PATH", "chroma_db/")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
 
 
